@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.menu {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-ul {
+  display: flex;
+  gap: 20px;
+}
+.menu-ul li a {
+  display: block;
+  padding: 5px;
+  color: #000;
+}
+
+.menu-ul li a:hover {
+  color: rgb(104, 97, 97);
+  background: rgb(233, 232, 232);
+  border-radius: 5px;
+}
