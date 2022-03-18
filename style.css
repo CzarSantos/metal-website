@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 li {
@@ -10,6 +10,24 @@ li {
 }
 a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo span {
+  font-size: 12px;
+  font-weight: 300;
+}
+.logo {
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  font-weight: 900;
+}
+.logo i {
+  color: #00b2ff;
 }
 
 .menu {
@@ -22,6 +40,10 @@ a {
   justify-content: space-around;
   align-items: center;
   color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+  z-index: 1000;
 }
 
 .menu-ul {
@@ -35,8 +57,8 @@ a {
 }
 
 .menu-ul li a:hover {
-  color: rgb(104, 97, 97);
-  background: rgb(233, 232, 232);
+  color: #ffffff;
+  background: rgb(43, 43, 43);
   border-radius: 5px;
 }
 
@@ -49,7 +71,8 @@ a {
 .banner {
   width: 100%;
   height: 100vh;
-  background: url("https://images.unsplash.com/photo-1593583850846-9dcc36bfcb54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.955) 100%),
+    url("https://images.unsplash.com/photo-1593583850846-9dcc36bfcb54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -60,6 +83,43 @@ a {
 
 .text {
   text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.text h1 {
+  font-size: calc(2rem + 5vw);
+  font-weight: 900;
+  position: relative;
+}
+
+.text h1::after {
+  content: "";
+  width: 50px;
+  height: 6px;
+  background: #00b2ff;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 10%;
+  left: 0px;
+}
+
+.text span {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.text p {
+  font-weight: 200;
+  font-size: 16px;
+}
+
+/* Bloco------------------------ */
+
+.bloco {
+  background: rgb(238, 238, 238);
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  transform: translateY(-7px);
 }
 
 /* Responsive ----------------------*/
@@ -73,7 +133,7 @@ a {
   .menu-ul {
     width: 0;
     height: calc(100vh - 60px);
-    background: rgb(139, 106, 106);
+    background: #292929;
     position: absolute;
     top: 60px;
     left: 0;
