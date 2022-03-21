@@ -117,9 +117,41 @@ a {
 
 .bloco {
   background: rgb(238, 238, 238);
-  padding: 20px;
+  padding: 60px 10px;
   border-radius: 10px 10px 0 0;
   transform: translateY(-7px);
+}
+
+.bloco .bloco-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bloco .bloco-content span {
+  max-width: 400px;
+  text-align: center;
+  font-weight: 300;
+  color: #837f7f;
+}
+
+.bloco .bloco-content a {
+  width: auto;
+  padding: 15px;
+  background: #21c828;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  box-shadow: 1px 1px 10px #777676;
+}
+
+.bloco .bloco-content i {
+  font-size: 32px;
 }
 
 /* Responsive ----------------------*/
