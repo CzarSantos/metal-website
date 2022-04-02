@@ -15,6 +15,7 @@ a {
 .container {
   max-width: 800px;
   margin: 0 auto;
+
 }
 
 .logo span {
@@ -44,6 +45,13 @@ a {
   letter-spacing: 0.1em;
   font-weight: 200;
   z-index: 1000;
+  transition: 0.6s;
+}
+
+/*Efeito color nvbr*/
+.stiky {
+  background: rgb(36, 35, 35, 0.55);
+  transition: 0.6s;
 }
 
 .menu-ul {
@@ -74,6 +82,7 @@ a {
   background: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.955) 100%),
     url("https://images.unsplash.com/photo-1593583850846-9dcc36bfcb54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -139,7 +148,7 @@ a {
 
 .bloco .bloco-content a {
   width: auto;
-  padding: 15px;
+  padding: 15px 25px;
   background: #21c828;
   border-radius: 50px;
   display: flex;
@@ -153,6 +162,96 @@ a {
 .bloco .bloco-content i {
   font-size: 32px;
 }
+
+
+
+/* Section process */
+
+#sobre{
+  padding: 80px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+ 
+}
+
+#sobre .steps,.steps-text{
+  width: 350px;
+}
+
+h2{
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+
+h2::before {
+  content: "";
+  width: 30px;
+  height: 4px;
+  background: #00b2ff;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  top:-2px;
+  left: 0;
+}
+
+.steps-text p{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+
+/* Valores sssection ------------------------------ */
+
+.valores{
+  padding: 80px 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.cards .card { 
+  max-width: 150px;
+  min-height: 180px;
+  border: 1px solid #cfcfcf;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  box-shadow: 0px 0px 10px 5px #f5f5f5;
+}
+
+.cards .card p{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+.cards .card span{
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
 
 /* Responsive ----------------------*/
 
@@ -189,5 +288,9 @@ a {
     visibility: visible;
     width: 80%;
     transition: 0.6s;
+  }
+
+  .bloco .bloco-content a {
+    margin-top: 30px;
   }
 }
