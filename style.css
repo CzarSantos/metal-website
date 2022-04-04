@@ -173,6 +173,7 @@ a {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
+  
  
 }
 
@@ -221,16 +222,21 @@ h2::before {
 }
 
 .cards .card { 
-  max-width: 150px;
-  min-height: 180px;
+  width: 200px;
+  min-height: 250px;
   border: 1px solid #cfcfcf;
   padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   text-align: center;
   box-shadow: 0px 0px 10px 5px #f5f5f5;
+}
+
+.cards .card i{
+  font-size: 48px;
+  padding-bottom: 15px;
 }
 
 .cards .card p{
@@ -242,6 +248,7 @@ h2::before {
 .cards .card span{
   font-weight: 300;
   font-size: 16px;
+  padding: 0 5px;
 }
 
 
