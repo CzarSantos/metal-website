@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap" rel="stylesheet">
   <title>Metal - Website</title>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
@@ -53,7 +54,42 @@
     <div class="steps">
       <h2>Etapas</h2>
 
+      <section data-slide="quote">
+        <div class="container-slide">
+          <img src="assets/01.jpg" alt="" class="imagem">
+          <!--  <i class="fa-solid fa-envelope"></i> -->
+          <h2>Text 1</h2>
+          <p>Subtitle</p>
+        </div>
+
+        <div class="container-slide">
+
+          <img src="assets/02.jpg" alt="" class="imagem">
+          <!-- <i class="fa-solid fa-envelope"></i> -->
+
+          <h2>Text 2</h2>
+          <p>Subtitle</p>
+        </div>
+
+        <div class="container-slide">
+
+          <img src="assets/03.jpg" alt="" class="imagem">
+          <!-- <i class="fa-solid fa-envelope"></i> -->
+
+          <h2>Text 3</h2>
+          <p>Subtitle</p>
+        </div>
+      </section>
+
     </div>
+
+    <script>
+      new SimpleSlide({
+        slide: 'quote',
+        time: 5000,
+        nav: true
+      });
+    </script>
 
     <div class="steps-text">
       <h2>O que fazemos</h2>
@@ -83,8 +119,9 @@
     </div>
   </section>
 
-
+  <script src="js/simple-slide.js"></script>
   <script src="/js/script.js"></script>
+
   <script src="https://kit.fontawesome.com/2b0612ebbf.js" crossorigin="anonymous"></script>
 </body>
 

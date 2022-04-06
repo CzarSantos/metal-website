@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+* {
+  scroll-behavior: smooth;
+}
 
 li {
   list-style: none;
@@ -201,9 +204,26 @@ h2::before {
   left: 0;
 }
 
+.steps{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.steps h2{
+  display: block;
+  width: 100%;
+}
+.container-slide h2::before{
+  display: none;
+}
+
 .steps-text p{
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 200;
+  line-height: 1.4;
+  text-align:inherit;
 }
 
 
@@ -225,13 +245,14 @@ h2::before {
   width: 200px;
   min-height: 250px;
   border: 1px solid #cfcfcf;
+  background: rgb(252, 252, 252);
   padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: 0px 0px 10px 5px #f5f5f5;
+ /*  box-shadow: 0px 0px 10px 5px #f5f5f5; */
 }
 
 .cards .card i{
@@ -300,4 +321,78 @@ h2::before {
   .bloco .bloco-content a {
     margin-top: 30px;
   }
+}
+
+@media (max-width: 755px){
+  #sobre{
+    justify-content: center;
+  }
+}
+
+
+
+/* SLIDE------------------------------------------- */
+
+.container-slide {
+  max-width: 100%;
+  width: 250px;
+  border: 1px solid rgb(228, 227, 227);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.container-slide h2,
+p {
+  text-align: center;
+  padding: 3px;
+  color: #5a5a5a;
+  font-family: sans-serif;
+}
+
+/*javascript*/
+[data-slide] {
+  position: relative;
+}
+
+[data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+[data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 1s;
+  z-index: 1;
+}
+
+[data-slide-nav] {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+[data-slide-nav] > button {
+  display: inline-block;
+  width: 20px;
+  margin: 4px;
+  height: 8px;
+  border: none;
+  padding: 0px;
+  
+  background: #2e2e2e;
+  text-indent: -100px;
+  overflow: hidden;
+}
+[data-slide-nav] > button.active {
+  background: #04e2ff;
 }
