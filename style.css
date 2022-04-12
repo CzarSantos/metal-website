@@ -18,8 +18,9 @@ a {
 .container {
   max-width: 800px;
   margin: 0 auto;
-
 }
+
+
 
 .logo span {
   font-size: 12px;
@@ -93,6 +94,27 @@ a {
   color: #fff;
 }
 
+.seta{
+  position:absolute;
+  width:40px;
+  height:40px;
+  background: url('https://www.sobrancelhasce.com.br/img/seta-branca.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 80px;
+  
+  animation: 1s anime ease-in-out infinite alternate;
+}
+
+@keyframes anime{
+  0%{
+    bottom: 5px;
+  }
+  100%{
+    bottom: 20px;
+  }
+}
+
 .text {
   text-align: center;
   letter-spacing: 0.1em;
@@ -123,6 +145,7 @@ a {
 .text p {
   font-weight: 200;
   font-size: 16px;
+  color: #bdbdbd;
 }
 
 /* Bloco------------------------ */
@@ -208,7 +231,7 @@ h2::before {
   
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .steps h2{
@@ -224,6 +247,7 @@ h2::before {
   font-weight: 200;
   line-height: 1.4;
   text-align:inherit;
+  padding: 0;
 }
 
 
@@ -245,7 +269,7 @@ h2::before {
   width: 200px;
   min-height: 250px;
   border: 1px solid #cfcfcf;
-  background: rgb(252, 252, 252);
+  background: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 5px;
   display: flex;
@@ -275,11 +299,141 @@ h2::before {
 
 
 
+/* About us section  ----------------------------------------------- */
+
+.about{
+  background: #F6F6F6;
+  padding: 80px 10px;
+  padding-bottom: 180px;
+}
 
 
 
+.text-about, .cards-about{
+  position: relative;
+}
+ 
+
+.box-about{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box-about p{
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.4;
+  text-align: inherit;
+  padding: 0;
+}
+
+/*--------------------*/
+
+.box-about .text-about{
+width: 350px;
+}
+
+.box-about .cards-about{
+  width: 400px;
+  height: 400px;
 
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.ca-a{
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+}
+
+.a1{
+  background: url('https://images.unsplash.com/photo-1649633195073-ec2be35814d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-size: cover;
+  background-position: center;
+}
+.a2{
+  background: url('https://images.unsplash.com/photo-1608522904505-3650e38ac4f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.a3{
+  grid-column: 1/3;
+  background: url('https://images.unsplash.com/photo-1648634992197-194e24cba1b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*----------------------------------------------------------*/
+
+.contact{
+  padding: 80px 10px;
+  height: 100vh;
+  background: #C4C4C4;
+  position: relative;
+  height: 300px;
+   
+}
+
+.contact::before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+height: 100%;
+width: 100%;
+content: '';
+background: inherit;
+transform-origin:bottom left;
+transform:skewy(-4deg); 
+}
+
+.text-cont h2,p{
+  position: relative;
+}
+
+.text-cont p{
+  font-size: 16px;
+    font-weight: 200;
+    line-height: 1.4;
+    text-align: inherit;
+    padding: 0;
+}
+
+.box-cont{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.img-cont{
+  width: 400px;
+  
+  transform: translateY(-60px);
+
+}
+
+.img-cont img{
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.footer{
+  background: #222222;
+  z-index: 1000;
+  padding: 80px 10px;
+  position: relative;
+  overflow: hidden;
+
+}
 
 /* Responsive ----------------------*/
 
@@ -328,17 +482,24 @@ h2::before {
     justify-content: center;
   }
 }
+@media (max-width: 750px){
+  .steps{
+    align-items: center;
+  }
+}
+
 
 
 
 /* SLIDE------------------------------------------- */
 
 .container-slide {
-  max-width: 100%;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   border: 1px solid rgb(228, 227, 227);
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .imagem {
@@ -346,13 +507,16 @@ h2::before {
   height: 200px;
   object-fit: cover;
 }
-
-.container-slide h2,
+.container-slide > h2,
 p {
   text-align: center;
-  padding: 3px;
-  color: #5a5a5a;
-  font-family: sans-serif;
+  padding: 4px;
+  margin-bottom: 0;
+   
+}
+.container-slide p{
+  padding-bottom: 15px;
+  font-size: 14px;
 }
 
 /*javascript*/
@@ -375,10 +539,11 @@ p {
 }
 
 [data-slide-nav] {
-  display: block;
-  justify-content: center;
-  text-align: center;
+  display: block; 
   margin-top: 20px;
+  display: 100%;
+  max-width: 250px;
+  text-align: center;
 }
 
 [data-slide-nav] > button {
