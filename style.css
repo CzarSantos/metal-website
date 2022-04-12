@@ -96,8 +96,8 @@ a {
 
 .seta{
   position:absolute;
-  width:40px;
-  height:40px;
+  width:30px;
+  height:30px;
   background: url('https://www.sobrancelhasce.com.br/img/seta-branca.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -197,6 +197,7 @@ a {
   padding: 80px 10px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   gap: 30px;
   justify-content: space-between;
   
@@ -224,7 +225,7 @@ h2::before {
   position: absolute;
   bottom: 0;
   top:-2px;
-  left: 0;
+ 
 }
 
 .steps{
@@ -398,12 +399,21 @@ transform:skewy(-4deg);
   position: relative;
 }
 
-.text-cont p{
+.text-cont p,i{
   font-size: 16px;
     font-weight: 200;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: inherit;
     padding: 0;
+    display: flex;
+}
+
+.text-cont p i{
+  display: block;
+  text-align: center;
+   min-width: 30px;
+   line-height: 1.5;
+ 
 }
 
 .box-cont{
@@ -475,7 +485,31 @@ transform:skewy(-4deg);
   .bloco .bloco-content a {
     margin-top: 30px;
   }
+
+
 }
+
+@media (max-width: 634px){
+  .text-cont h2{
+    text-align: center;
+  }
+  .text-cont p {
+    justify-content: center;
+  }
+  .contact{
+    height: 400px;
+  
+  }
+  .img-cont img{
+    position: relative;
+    transform: translateY(100px);
+  }
+  .img-cont{
+    width: 300px;
+  }
+}
+
+
 
 @media (max-width: 755px){
   #sobre{
@@ -486,7 +520,36 @@ transform:skewy(-4deg);
   .steps{
     align-items: center;
   }
+  .steps h2{
+    text-align: center;
+  }
+  .steps-text p{
+    text-align: center;
+  }
+  .steps-text h2{
+    text-align: center;
+  }
 }
+  @media (max-width: 719px){
+    .valores h2{
+      text-align: center;
+    }
+}
+
+@media (max-width: 779px){
+  .cards-about{
+    padding: 20px;
+  }
+
+  .text-about > h2{
+    text-align: center;
+  }
+  .text-about > p{
+    text-align: center;
+  }
+
+}
+
 
 
 
