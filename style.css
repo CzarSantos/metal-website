@@ -7,7 +7,9 @@
 * {
   scroll-behavior: smooth;
 }
-
+html{
+  overflow-x: hidden;
+}
 li {
   list-style: none;
 }
@@ -194,7 +196,7 @@ a {
 
 /* Section process */
 
-#sobre{
+.box-info{
   padding: 80px 10px;
   display: flex;
   flex-wrap: wrap;
@@ -206,7 +208,7 @@ a {
  
 }
 
-#sobre .steps,.steps-text{
+.box-info .steps,.steps-text{
   width: 350px;
 }
 
@@ -271,15 +273,15 @@ h2::before {
 .cards .card { 
   width: 200px;
   min-height: 250px;
-  border: 1px solid #cfcfcf;
-  background: rgb(255, 255, 255);
+  border: 1px solid #eaeaea ;
+  background: rgb(254, 254, 254);
   padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
- /*  box-shadow: 0px 0px 10px 5px #f5f5f5; */
+ box-shadow: 4px 4px 10px 0px #f7f7f7; 
 }
 
 .cards .card i{
@@ -407,7 +409,7 @@ transform:skewy(-4deg);
 
 .text-cont p,i{
   font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.8;
     text-align: inherit;
     padding: 0;
@@ -446,10 +448,27 @@ transform:skewy(-4deg);
 .footer{
   background: #222222;
   color:#fff;
-  z-index: 1000;
   padding: 80px 10px;
   position: relative;
   overflow: hidden;
+
+}
+
+.arrow{
+  position: absolute;
+  right: 15px;
+  bottom:15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00b2ff;
+  font-size: 21px;
+  cursor: pointer;
+  font-weight: 700;
 
 }
 
@@ -484,11 +503,11 @@ transform:skewy(-4deg);
 }
 .footer-base p{
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4;
   text-align: center;
   padding: 10px;
-  color: #fff;
+  color: rgb(197, 197, 197);
 }
 
 
@@ -681,4 +700,35 @@ p {
 }
 [data-slide-nav] > button.active {
   background: #04e2ff;
+}
+
+
+/* Animação Scrool */
+
+[data-anime]{
+  opacity: 0; /* começa off */
+  transition: 1s;
+}
+
+[data-anime="left"]{
+  transform: translate3d(-20px,0,10px);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime="back"]{
+  transform: translate3d(2px,0,30px);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime="top"]{
+  transform: translate3d(0,30px,0);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+@media (max-width: 720px) {
+  [data-anime="rigth"]{
+    transform: translate3d(0,20px,0);/* cima/baixo - esquerda/direita -  profundidade */
+  }
 }
