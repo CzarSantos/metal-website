@@ -257,7 +257,7 @@ h2::before {
 
 
 
-/* Valores sssection ------------------------------ */
+/* Valores section ------------------------------ */
 
 .valores{
   padding: 80px 10px;
@@ -321,7 +321,7 @@ h2::before {
 
 .box-about{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -375,7 +375,7 @@ width: 350px;
 }
 
 
-/*----------------------------------------------------------*/
+/* Contact section  ----------------------------------------------- */
 
 .contact{
   padding: 80px 10px;
@@ -396,7 +396,7 @@ width: 100%;
 content: '';
 background: inherit;
 transform-origin:bottom left;
-transform:skewy(-4deg); 
+transform:skewy(-3deg); 
 }
 
 .text-cont h2,p{
@@ -444,6 +444,8 @@ transform:skewy(-4deg);
   z-index: 0;
   position: absolute;
 }
+
+/* Footer ----------------------------------------------- */
 
 .footer{
   background: #222222;
@@ -511,7 +513,119 @@ transform:skewy(-4deg);
 }
 
 
-/* Responsive ----------------------*/
+/* Others ------------------------------------------*/
+
+
+/* SLIDE------------------------------------------- */
+
+.container-slide {
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid rgb(228, 227, 227);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.container-slide > h2,
+p {
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 0;
+   
+}
+.container-slide p{
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+/*javascript Slider-------------------------------------------------*/
+[data-slide] {
+  position: relative;
+}
+
+[data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+[data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 1s;
+  z-index: 1;
+}
+
+[data-slide-nav] {
+  display: block; 
+  margin-top: 20px;
+  display: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+[data-slide-nav] > button {
+  display: inline-block;
+  width: 20px;
+  margin: 4px;
+  height: 8px;
+  border: none;
+  padding: 0px;
+  
+  background: #2e2e2e;
+  text-indent: -100px;
+  overflow: hidden;
+}
+[data-slide-nav] > button.active {
+  background: #04e2ff;
+}
+
+
+/* Animação Scrool -----------------------------------------------*/
+
+[data-anime]{
+  opacity: 0; /* começa off */
+  transition: 1s;
+}
+
+[data-anime="left"]{
+  transform: translate3d(-20px,0,10px);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime="back"]{
+  transform: translate3d(2px,0,30px);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime="top"]{
+  transform: translate3d(0,30px,0);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+@media (max-width: 720px) {
+  [data-anime="rigth"]{
+    transform: translate3d(0,20px,0);/* cima/baixo - esquerda/direita -  profundidade */
+  }
+}
+
+
+
+
+
+
+
+
+/* Responsive -------------------------------------------------*/
 
 /* Menu */
 
@@ -589,10 +703,13 @@ transform:skewy(-4deg);
 
 
 @media (max-width: 755px){
-  #sobre{
+  .box-info{
     justify-content: center;
   }
 }
+
+
+
 @media (max-width: 750px){
   .steps{
     align-items: center;
@@ -625,110 +742,12 @@ transform:skewy(-4deg);
     text-align: center;
   }
 
-}
-
-
-
-
-
-/* SLIDE------------------------------------------- */
-
-.container-slide {
-  width: 100%;
-  max-width: 250px;
-  border: 1px solid rgb(228, 227, 227);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.imagem {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.container-slide > h2,
-p {
-  text-align: center;
-  padding: 4px;
-  margin-bottom: 0;
-   
-}
-.container-slide p{
-  padding-bottom: 15px;
-  font-size: 14px;
-}
-
-/*javascript*/
-[data-slide] {
-  position: relative;
-}
-
-[data-slide] > * {
-  position: absolute;
-  top: 0px;
-  opacity: 0;
-  transition: opacity 3s;
-}
-
-[data-slide] > .active {
-  position: relative;
-  opacity: 1;
-  transition: opacity 1s;
-  z-index: 1;
-}
-
-[data-slide-nav] {
-  display: block; 
-  margin-top: 20px;
-  display: 100%;
-  max-width: 250px;
-  text-align: center;
-}
-
-[data-slide-nav] > button {
-  display: inline-block;
-  width: 20px;
-  margin: 4px;
-  height: 8px;
-  border: none;
-  padding: 0px;
-  
-  background: #2e2e2e;
-  text-indent: -100px;
-  overflow: hidden;
-}
-[data-slide-nav] > button.active {
-  background: #04e2ff;
-}
-
-
-/* Animação Scrool */
-
-[data-anime]{
-  opacity: 0; /* começa off */
-  transition: 1s;
-}
-
-[data-anime="left"]{
-  transform: translate3d(-20px,0,10px);/* cima/baixo - esquerda/direita -  profundidade */
-}
-
-[data-anime="back"]{
-  transform: translate3d(2px,0,30px);/* cima/baixo - esquerda/direita -  profundidade */
-}
-
-[data-anime="top"]{
-  transform: translate3d(0,30px,0);/* cima/baixo - esquerda/direita -  profundidade */
-}
-
-[data-anime].animate{
-  opacity: 1;
-  transform: translate3d(0,0,0);
-}
-
-@media (max-width: 720px) {
-  [data-anime="rigth"]{
-    transform: translate3d(0,20px,0);/* cima/baixo - esquerda/direita -  profundidade */
+  .box-about{
+    justify-content: center;
   }
+
 }
+
+
+
+
