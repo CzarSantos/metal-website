@@ -194,10 +194,10 @@ a {
 
 
 
-/* Section process */
+/* Section process------------------------*/
 
 .box-info{
-  padding: 80px 10px;
+  padding: 80px 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
@@ -271,10 +271,11 @@ h2::before {
 }
 
 .cards .card { 
-  width: 200px;
+  width: 220px;
   min-height: 250px;
   border: 1px solid #eaeaea ;
-  background: rgb(254, 254, 254);
+  /* background: rgb(254, 254, 254); */
+  background:#292B2C;
   padding: 20px;
   border-radius: 5px;
   display: flex;
@@ -282,6 +283,7 @@ h2::before {
   justify-content: center;
   text-align: center;
  box-shadow: 4px 4px 10px 0px #f7f7f7; 
+ color: #fff;
 }
 
 .cards .card i{
@@ -296,7 +298,7 @@ h2::before {
 
 
 .cards .card span{
-  font-weight: 300;
+  font-weight: 200;
   font-size: 16px;
   padding: 0 5px;
 }
@@ -381,6 +383,7 @@ width: 350px;
   padding: 80px 10px;
   height: 100vh;
   background: #C4C4C4;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(251, 82, 131, 1) 100%);
   position: relative;
   height: 300px;
    
